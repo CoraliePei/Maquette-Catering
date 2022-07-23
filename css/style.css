@@ -1,0 +1,335 @@
+@font-face {
+    font-family: "PlayFairDisplay-Regular";
+    src: url(../fonts/PlayFairDisplay-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "PlayFairDisplay-Regular", Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+}
+
+header .barNav {
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 3px;
+    box-shadow: 0px 5px 5px  rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    margin-bottom: 2px;
+}
+
+header .barNav .logo {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 10px;
+    font-size: 1.6em;
+}
+
+header .barNav .navigation {
+    width: 30%;
+    height: 60px;
+    display: none;
+}
+
+header .imgHeader {
+    width: 100%;
+    height: 30vh;
+    background-image: url(../img/hamburger.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    z-index: 0;
+}
+
+/* Correction alternative 
+imgHeader {
+    background-position: end;
+    background-position: 35% 50%; ==> décale selon x et y
+*/
+
+header .imgHeader h1 {
+    color: #000000a2;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    font-size: 1.9em;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+/* Contenu lié au main */
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Section principale */
+
+main #container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.none {
+    width: 100%;
+    display: none;
+}
+
+main #container div h2 {
+    font-size: 2.5em;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+main #container #sctAbout h3 {
+    text-align: center;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+main #container #sctAbout p {
+    font-size: 1.2em;
+    line-height: 30px;
+}
+
+main #container p span:nth-child(1) {
+    background-color: #dad4d4;
+    padding: 3px;
+}
+
+main #container p .clr-gris {
+    color: #7a7474;
+}
+
+/* Section Our Menu */
+
+main #container #sctMenu h3 {
+    font-weight: 400;
+    font-size: 1.3em;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+
+}
+
+main #container #sctMenu p {
+    color: #7a7474;
+    margin-bottom: 45px;
+}
+
+/* Dernière image section */
+
+main #container div img {
+    width: 100%;
+    border-radius: 4px;
+    filter: contrast(90%);
+}
+
+/* Partie Contact */
+
+hr {
+    color:rgb(73, 72, 72);
+    margin-top: 30px;
+}
+
+main #contact h2 {
+    margin-top: 90px;
+    font-size: 2.5em;
+    margin-top: 90px;
+    margin-bottom: 40px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+main #contact p {
+    font-size: 1em;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+main #contact p span {
+    color: #727883;
+    font-weight: 700;
+}
+
+/* Formulaire */
+main #contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+main #contact form input {
+    height: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 5px;
+    border-style: none;
+    border-bottom: 1px solid #7a7474;
+    margin-bottom: 20px;
+}
+
+main #contact form .submit {
+    width: 140px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: #dad4d4;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: #dad4d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width:576px){
+    header .barNav .logo {
+        width: 40%;
+        font-size: 1em;
+    }
+
+    header .barNav .navigation {
+        display: flex;
+        align-content: center;
+        width: 40%;
+    }
+
+    header .barNav .navigation ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+    }
+    
+    header .barNav .navigation ul li {
+        list-style: none;
+        margin-right: 5px;
+    }
+    
+    header .barNav .navigation ul li a {
+        text-decoration: none;
+        color: #000;
+        padding: 5px;
+    }
+
+    header .imgHeader {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:768px){
+    header .barNav .logo {
+        width: 40%;
+        font-size: 1.2em;
+        padding-left: 20px;
+    }
+
+    header .barNav .navigation {
+        display: flex;
+        align-content: center;
+        width: 40%;
+        padding-right: 20px;;
+    }
+
+    header .barNav .navigation ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+    }
+    
+    header .barNav .navigation ul li {
+        list-style: none;
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+    
+    header .barNav .navigation ul li a {
+        text-decoration: none;
+        color: #000;
+        padding: 5px;
+    }
+
+    header .barNav .navigation ul li a:hover {
+        text-decoration: none;
+        color: #f1f1f1;
+        padding: 5px;
+        background-color: #000;
+    }
+
+
+    header .imgHeader {
+        width: 100%;
+        height: 80vh;
+        background-position: center;
+    }
+
+    header .imgHeader h1 {
+        margin-bottom: 20px;
+        margin-left: 30px;
+        font-size: 2.5em;
+    }
+
+    main {
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+
+    main #container {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    main #container div {
+        width: 50%;
+        padding: 30px;
+    }
+
+    main #container div img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .none {
+        display: flex;
+    }
+
+    main #contact form .submit:hover {
+        background-color: #000;
+        color:#f1f1f1;
+    }
+
+}
